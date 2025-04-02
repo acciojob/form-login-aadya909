@@ -1,8 +1,10 @@
 function getFormvalue(event) {
-	event.preventDefault();
- let firstName = document.querySelector('#fname').value.trim();
-  let lastName = document.querySelector('#lname').value.trim();
-	  if (!firstName || !lastName) {
+            event.preventDefault(); // Prevents default form submission behavior
+            
+            let firstName = document.querySelector('#fname').value.trim();
+            let lastName = document.querySelector('#lname').value.trim();
+            
+            if (!firstName || !lastName) {
                 alert("Please enter both first and last names.");
                 return;
             }
@@ -11,6 +13,3 @@ function getFormvalue(event) {
         }
         
         document.querySelector('#nameForm').addEventListener('submit', getFormvalue);
-    
-
-}
